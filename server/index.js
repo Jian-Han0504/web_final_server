@@ -1,4 +1,4 @@
-import { connectMongo, Task, Weblink, Club } from "./db";
+const { connectMongo, Task, Weblink, Club } = require("./db");
 // import Club from "./models/club";
 
 connectMongo();
