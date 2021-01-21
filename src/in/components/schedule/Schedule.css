@@ -1,0 +1,81 @@
+.calendar {
+    width: 60vw;
+    margin-left: 5vw;
+    float: left;
+}
+
+.right {
+    width: 25vw;
+    margin-right: 5vw;
+    float: right;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.todo-app__list {
+    list-style: none;
+    padding: 0;
+    /* 5*5=25 */
+}
+
+.todo-list-h1 {
+    margin-top: 1vh;
+}
+
+.todo-app__item {
+    width: 100%;
+    min-height: 5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgb(249, 252, 215);
+    border: 1px solid rgba(0, 0, 0, 0.089);
+}
+
+.todo-app__item-date {
+    font-size: 1.5em;
+    font-weight: 550;
+    overflow-wrap: break-word;
+    transition: opacity 0.3s;
+    height: 100%;
+    margin-bottom: 0vh;
+    margin-left: 1vw;
+    text-align: left;
+    width: 30%;
+    float: left;
+}
+
+.todo-app__item-detail {
+    font-size: 1.5em;
+    font-weight: 550;
+    overflow-wrap: break-word;
+    transition: opacity 0.3s;
+    height: 100%;
+    margin-bottom: 0vh;
+    margin-left: 1vw;
+    text-align: left;
+    width: 45%;
+    float: left;
+}
+
+.todo-app__item-x {
+    display: none;
+}
+
+.todo-app__item:hover .todo-app__item-x {
+    display: inline;
+    float: right;
+    position: relative;
+    max-width: 2vw;
+    max-height: 2vh;
+    margin-right: 2vw;
+    margin-left: 1vw;
+}
+
+.todo-app__item:hover .todo-app__item-x:hover {
+    max-width: 3vw;
+    max-height: 3vh;
+    margin-right: 1vw;
+}
