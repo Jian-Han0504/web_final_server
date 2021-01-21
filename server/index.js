@@ -10,9 +10,6 @@ const { spawn } = require("child_process");
 const app = require("express")();
 const { wakeDyno } = require('heroku-keep-awake');
 const DYNO_URL = "";
-app.listen(PORT, ()=>{
-  wakeDyno(DYNO_URL);
-})
 const server = require("http").createServer(app);
 const options = {
   /* ... */
@@ -25,6 +22,8 @@ const io = require("socket.io")(server, options);
 // This part is for server behavior
 io.on("connection", (socket) => {
   console.log("a user connectted");
+
+  wakeDyno(DYNO_URL);
 
   // task
   async function emitEvent(ID) {
